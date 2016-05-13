@@ -12,6 +12,17 @@ docker run \
     --detach \
     bambucha/dokuwiki
 ```
+To share volumes
+```shell
+docker run \
+    --publish 80:9000 \
+    -v /home/user/dokuwiki:/dokuwiki \
+    --name dokuwiki \
+    --restart always \
+    --detach \
+    bambucha/dokuwiki
+```
+
 
 Setup DokuWiki using [installer](http://localhost/install.php).
 
